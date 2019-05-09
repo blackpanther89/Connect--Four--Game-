@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 350px;
+}
+
+#board {
+    display: flex;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 30px;
+    font-style: bolder;
+}
+
+.slot {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    background: blue;
+}
+
+.hole {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+}
+
+.player1 .hole {
+    background-color: red;
+}
+
+.player2 .hole {
+    background-color: yellow;
+}
+
+.player2 .hole .player1 .hole {
+    animation-name: fall-animation;
+    animation-duration: 500ms;
+}
+
+@keyframes fall-animation {
+    from {
+        transform: translateY(-500px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+#reset {
+    margin-top: 5px;
+    height: 60px;
+    width: 60px;
+    border-radius: 150px;
+    border: white 1px solid;
+    background-color: black;
+    font-weight: bolder;
+    font-size: 17px;
+    color: white;
+    margin-left: 250px;
+}
